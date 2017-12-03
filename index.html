@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>Pink Pong</title>
+</head>
+
+<body>
+
+	<div class="video-background">
+      <iframe class="videofront" src="https://www.youtube.com/embed/3KM_m_d_ij0?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=3KM_m_d_ij0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+	<div id="stamp" onclick="show(0)">
+	<p>an <br>Arduino<br>and<br>Processing<br>project</p>
+	</div>
+
+    
+    
+	<div id="items">
+		<div class="item" onclick="show(1)">
+		<div class="circle"></div>
+		<p>OVERVIEW</p>
+		</div>
+		<div class="item" onclick="show(2)">
+		<div class="circle"></div>
+		<p>COMPONENT<br>LIST</p>
+		</div>
+		<div class="item" onclick="show(3)">
+		<div class="circle"></div>
+		<p>WIRING<br>DIAGRAM</p>
+		</div>
+		<div class="item" onclick="show(4)">
+		<div class="circle"></div>
+		<p>SKETCH</p>
+		</div>
+		<div class="item" onclick="show(5)">
+		<div class="circle"></div>
+		<p>RESULTS</p>
+		</div>
+		
+	</div>
+	
+<div class="below">
+  
+<div class="popout">
+ <div class="popoutwrap">
+ 	<div class="popcircle">	</div>
+ 	<div id="part1">
+		<div class="title">OVERVIEW</div>
+ 	<p>In this project, we will make a simple 'Pong' game using Processing. And then we will use Arduino to connect two ultrasonic sensors to detect players' hand motion, so that players can adjust the distance between their hands and the sensor to play the game. We will also try to explore a bit about prjection mapping, using some Processing tool to achieve simple projection mapping for our game. </p>
+ 	</div>
+ 	<div id="part2">
+ 	<div class="title">COMPONENT LIST</div>
+ 	<p>
+	Arduino Uno x 1 
+	<br>Projector x 1
+	<br>Acrylic Sheet x 3
+	<br>Ultrasonic Sensor x 2
+	<br>Computer x 1
+			</p>
+ 	</div>
+ 	<div id="part3">
+ 	<div class="title">WIRING DIAGRAM</div>
+ 	<img id="diagram" src="wire.png">
+ 	</div>
+ 	<div id="part4">
+ 	<div class="title">SKETCH</div>
+ 	<div class="sketch">
+ 	<p>const int trigPin = 13;<br />const int echoPin = 12;<br />const int trigPin2 = 4;<br />const int echoPin2 = 3;</p>
+<p>void setup() {<br />// initialize serial communication:<br />Serial.begin(9600);<br />pinMode(trigPin, OUTPUT);<br />pinMode(trigPin2, OUTPUT);<br />pinMode(echoPin, INPUT);<br />pinMode(echoPin2, INPUT);}</p>
+<p>void loop(){<br />float duration, duration2, cm, cm2;<br />digitalWrite(trigPin, LOW);<br />delayMicroseconds(2);<br />digitalWrite(trigPin, HIGH);<br />delayMicroseconds(10);<br />digitalWrite(trigPin, LOW);<br />duration = pulseIn(echoPin, HIGH);<br />cm = microsecondsToCentimeters(duration);</p>
+<p>digitalWrite(trigPin2, LOW);<br />delayMicroseconds(2);<br />digitalWrite(trigPin2, HIGH);<br />delayMicroseconds(10);<br />digitalWrite(trigPin2, LOW);<br />duration2 = pulseIn(echoPin2, HIGH);<br />cm2 = microsecondsToCentimeters(duration2);</p>
+<p>Serial.print('A');<br />Serial.print(cm-1);<br />Serial.print('B');<br />Serial.print(cm2-1);<br />Serial.println('E');}</p>
+<p>float microsecondsToCentimeters(float microseconds){<br />return microseconds / 29 / 2;}</p>
+ 	</div></div>
+ 	<div id="part5">
+ 	<div class="title">RESULT</div>
+ 	<a href="https://youtu.be/UKUrTzcWn9I">https://youtu.be/UKUrTzcWn9I</a>
+ 	</div>
+ 
+</div></div> 
+        
+</div>  
+         
+            
+            
+	
+	
+ 
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectionMap>
+  <surface horizontalForce="0" id="0" lock="false" name="0" res="41" sketch="final_ponggggg$SketchLeft" type="0" verticalForce="0">
+    <cornerpoint i="0" x="15.0" y="391.0"/>
+    <cornerpoint i="1" x="503.0" y="472.0"/>
+    <cornerpoint i="2" x="502.0" y="799.0"/>
+    <cornerpoint i="3" x="16.0" y="885.0"/>
+  </surface>
+  <surface horizontalForce="0" id="1" lock="false" name="1" res="42" sketch="final_ponggggg$SketchMiddle" type="0" verticalForce="0">
+    <cornerpoint i="0" x="503.0" y="472.0"/>
+    <cornerpoint i="1" x="906.0" y="470.0"/>
+    <cornerpoint i="2" x="906.0" y="802.0"/>
+    <cornerpoint i="3" x="502.0" y="799.0"/>
+  </surface>
+  <surface horizontalForce="0" id="2" lock="false" name="2" res="41" sketch="final_ponggggg$SketchRight" type="0" verticalForce="0">
+    <cornerpoint i="0" x="906.0" y="470.0"/>
+    <cornerpoint i="1" x="1414.0" y="392.0"/>
+    <cornerpoint i="2" x="1423.0" y="887.0"/>
+    <cornerpoint i="3" x="906.0" y="802.0"/>
+  </surface>
+</ProjectionMap>
